@@ -9,11 +9,6 @@
 	<!-- pro文件路径 -->
 	<property name="PRO_FILE_PATH" value="./log.txt" />
 
-	<property name="serverName" value="127.0.0.1" />
-	<property name="port" value="3306" />
-	<property name="dbName" value="logdb" />
-	<property name="user" value="root" />
-	<property name="password" value="123456" />
 
 	<appender name="PROD_FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -28,20 +23,6 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<pattern>${PATTERN}</pattern>
 		</layout>
-	</appender>
-	<appender name="DB"
-		class="ch.qos.logback.classic.db.DBAppender">
-		<connectionSource
-			class="ch.qos.logback.core.db.DataSourceConnectionSource">
-			<dataSource
-				class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource">
-				<serverName>${serverName}</serverName>
-				<port>${port}</port>
-				<databaseName>${dbName}</databaseName>
-				<user>${user}</user>
-				<password>${password}</password>
-			</dataSource>
-		</connectionSource>
 	</appender>
 	<logger name="com.zaxxer.hikari" level="ERROR" />
 	<root level="INFO">
