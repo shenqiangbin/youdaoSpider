@@ -8,7 +8,7 @@
 		<job>
 			<name>DemoJob</name>
 			<group>JobGroup</group>
-			<job-class>domainSpider.QuartzDemoJob</job-class>
+			<job-class>youdaoSpider.QuartzDemoJob</job-class>
 		</job>
 		<trigger>
 			<cron>
