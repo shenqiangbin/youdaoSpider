@@ -1,5 +1,7 @@
 /target/
 log.txt
+*.log
+/logFile
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
